@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sotto Pulse</title>
+<meta name="description" content="Live health of the Zcash network: shielded share, value pools, Sprout sunset, mining concentration.">
+<link rel="icon" href="/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css"></head>
+<body>
+<header class="top">
+  <div class="brand"><img src="/logo.svg" alt="" width="30" height="30"><span>sotto</span><b>pulse</b></div>
+  <div class="meta"><span class="live"><i></i>Zcash mainnet</span><span id="height">...</span></div>
+</header>
+<main>
+  <section class="kpis">
+    <div class="kpi"><span>ZEC</span><b id="price">...</b><em id="chg"></em></div>
+    <div class="kpi accent"><span>Shielded</span><b id="share">...</b><em id="shieldedZec"></em></div>
+    <div class="kpi"><span>Top pool, 24 h</span><b id="nk">...</b><em id="nkNote"></em></div>
+    <div class="kpi"><span>Block time</span><b id="bt">...</b><em id="b24"></em></div>
+  </section>
+
+  <section class="card wide">
+    <div class="head"><h2>Value pools</h2><span class="sub" id="supply"></span></div>
+    <div class="stack" id="stack" role="img" aria-label="Share of supply per pool"></div>
+    <table class="pools"><thead><tr><th>Pool</th><th>ZEC</th><th>USD</th><th>Share</th></tr></thead><tbody id="poolRows"></tbody></table>
+    <svg class="trend" id="trend" viewBox="0 0 600 80" preserveAspectRatio="none" aria-hidden="true"></svg>
+  </section>
+
+  <section class="grid2">
+    <div class="card sunset">
+      <div class="head"><h2>Sprout sunset</h2><span class="sub">NU7</span></div>
+      <div class="big" id="sproutZec">...</div>
+      <div class="usd" id="sproutUsd"></div>
+      <div class="count"><b id="days">...</b><span>days to NU7 target</span></div>
+      <div class="bar"><i id="dayBar"></i></div>
+    </div>
+    <div class="card">
+      <div class="head"><h2>Mining, last 24 h</h2><span class="sub" id="minedBlocks"></span></div>
+      <ol class="miners" id="miners"></ol>
+    </div>
+  </section>
+
+  <section class="grid2">
+    <div class="card">
+      <div class="head"><h2>Network</h2></div>
+      <dl class="net">
+        <div><dt>Transactions 24 h</dt><dd id="tx">...</dd></div>
+        <div><dt>Mempool</dt><dd id="mp">...</dd></div>
+        <div><dt>Median fee</dt><dd id="fee">...</dd></div>
+        <div><dt>Nodes</dt><dd id="nodes">...</dd></div>
+        <div><dt>Hashrate</dt><dd id="hr">...</dd></div>
+        <div><dt>Market cap</dt><dd id="mc">...</dd></div>
+      </dl>
+    </div>
+    <div class="card">
+      <div class="head"><h2>Upgrades</h2></div>
+      <ol class="ups" id="ups"></ol>
+    </div>
+  </section>
+</main>
+<footer class="foot">Data: zcashexplorer.app, Blockchair. Open source.</footer>
+<script src="/app.js"></script>
+</body></html>
